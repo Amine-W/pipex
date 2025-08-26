@@ -6,7 +6,7 @@
 /*   By: amwahab <amwahab@42.student.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/25 14:59:55 by amwahab           #+#    #+#             */
-/*   Updated: 2025/08/26 13:41:55 by amwahab          ###   ########.fr       */
+/*   Updated: 2025/08/26 16:25:30 by amwahab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,7 @@ char	*ft_get_full_path(char *cmd, char **envp)
 			return (full_path);
 		}
 		free(full_path);
+		full_path = NULL;
 		i++;
 	}
 	ft_free_split(paths);

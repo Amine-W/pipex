@@ -12,7 +12,7 @@
 
 # Compiler flags
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -fsanitize=address -g
 
 # Sources
 SRC = main.c process.c access.c pipe.c

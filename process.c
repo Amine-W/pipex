@@ -6,7 +6,7 @@
 /*   By: amwahab <amwahab@42.student.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/22 18:32:09 by amwahab           #+#    #+#             */
-/*   Updated: 2025/08/26 14:41:03 by amwahab          ###   ########.fr       */
+/*   Updated: 2025/08/26 16:26:30 by amwahab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,4 +71,8 @@ void ft_wait_children(t_pipe *pipex)
     int status;
     waitpid(pipex->pid1, &status, 0);
     waitpid(pipex->pid2, &status, 0);
+	if (pipex->path1)
+        free(pipex->path1);
+    if (pipex->path2)
+        free(pipex->path2);
 }
