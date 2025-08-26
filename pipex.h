@@ -28,15 +28,15 @@ typedef struct s_pipe
 	int	outfile;
 	char *path1;
 	char *path2;
-	char **cmd_args;
+	char **cmd_args1;
+	char **cmd_args2;
 }			t_pipe;
 
-void	ft_init_struct(t_pipe *pipe);
 void	ft_wait_children(t_pipe *pipe);
 void	ft_create_pipe(t_pipe *pipe, char **argv, int argc);
 char	*ft_get_full_path(char *cmd, char **envp);
-void	ft_child1(t_pipe *pipex, char **argv, char **envp);
-void	ft_child2(t_pipe *pipex, char **argv, char **envp);
+void	ft_child1(t_pipe *pipex, char **envp);
+void	ft_child2(t_pipe *pipex, char **envp);
 void	ft_error(const char *str);
 void	ft_init_pipex(t_pipe *pipex);
 
